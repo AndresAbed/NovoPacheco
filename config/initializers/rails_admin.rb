@@ -4,6 +4,15 @@ RailsAdmin.config do |config|
     field :description
     field :image
   end
+  config.model Brand do
+    field :name
+    field :description
+    field :besides
+    field :logo
+    field :image1
+    field :image2
+    field :image3
+  end
   config.actions do
     dashboard
     index

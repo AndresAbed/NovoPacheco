@@ -23,3 +23,6 @@ en:
   activerecord:
     models:
       user: Usuarios
+      event: Eventos
+      brand: Locales
+      detail: Detalles
