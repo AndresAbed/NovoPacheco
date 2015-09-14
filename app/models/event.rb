@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
-  validates :image, precence: true
-  has_attached_file :avatar, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+  validates :image, presence: true
+  has_attached_file :image, 
+  url: "/images/events/:id/:style/:basename.:extension"
+  validates_attachment :image, content_type: { content_type: 
+    ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 end
