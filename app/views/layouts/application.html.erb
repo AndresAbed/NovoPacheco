@@ -1,14 +1,157 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Novo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <title>Novo Pacheco Shopping</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+  <!--/Feedback-->
+    <div id="feedback">
+      <div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
+        <form method="POST" action="/feedback.php" class="form panel-body" role="form">
+          <div class="form-group">
+            <input class="form-control" name="Emailfeedback" autofocus placeholder="Tu e-mail" type="Email" />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="Mensajefeedback" required placeholder="Sumate a nuestro shopping, agendemos una reunion" rows="5"></textarea>
+          </div>
+          <button class="btn btn-primary pull-right" type="submit">Contactar</button>
+        </form>
+    </div>
+    <div id="feedback-tab">Marcas</div>
+    </div>
+  <!--/Feedback-->
 
-</body>
+  <%= yield %>
+
+  <!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+     <div id="footerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h4>Novo Pacheco Shopping</h4>
+            <div class="hline-w"></div>
+            <p>Podrá vivir lindos momentos, entre familiares o amigos, desde ir de compras, cenar o participar de divertidos talleres que se dictan en el lugar.</p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Redes sociales</h4>
+            <div class="hline-w"></div>
+            <p>
+              <a href="https://www.facebook.com/NovoPacheco?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Contacto</h4>
+            <div class="hline-w"></div>
+            <p>
+              3814460610,<br/>
+              info@novopacheco.com,<br/>
+              General Pacheco.<br/>
+            </p>
+          </div>
+        
+        </div><!--/row -->
+      </div><!--/container -->
+     </div><!--/footerwrap -->
+
+    <script>
+      // Portfolio
+      (function($) {
+        "use strict";
+        var $container = $('.portfolio'),
+          $items = $container.find('.portfolio-item'),
+          portfolioLayout = 'fitRows';
+          
+          if( $container.hasClass('portfolio-centered') ) {
+            portfolioLayout = 'masonry';
+          }
+              
+          $container.isotope({
+            filter: '*',
+            animationEngine: 'best-available',
+            layoutMode: portfolioLayout,
+            animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+          },
+          masonry: {
+          }
+          }, refreshWaypoints());
+          
+          function refreshWaypoints() {
+            setTimeout(function() {
+            }, 1000);   
+          }
+              
+          $('nav.portfolio-filter ul a').on('click', function() {
+              var selector = $(this).attr('data-filter');
+              $container.isotope({ filter: selector }, refreshWaypoints());
+              $('nav.portfolio-filter ul a').removeClass('active');
+              $(this).addClass('active');
+              return false;
+          });
+          
+          function getColumnNumber() { 
+            var winWidth = $(window).width(), 
+            columnNumber = 1;
+          
+            if (winWidth > 1200) {
+              columnNumber = 5;
+            } else if (winWidth > 950) {
+              columnNumber = 4;
+            } else if (winWidth > 600) {
+              columnNumber = 3;
+            } else if (winWidth > 400) {
+              columnNumber = 2;
+            } else if (winWidth > 250) {
+              columnNumber = 1;
+            }
+              return columnNumber;
+            }       
+            
+            function setColumns() {
+              var winWidth = $(window).width(), 
+              columnNumber = getColumnNumber(), 
+              itemWidth = Math.floor(winWidth / columnNumber);
+              
+              $container.find('.portfolio-item').each(function() { 
+                $(this).css( { 
+                width : itemWidth + 'px' 
+              });
+            });
+          }
+          
+          function setPortfolio() { 
+            setColumns();
+            $container.isotope('reLayout');
+          }
+            
+          $container.imagesLoaded(function () { 
+            setPortfolio();
+          });
+          
+          $(window).on('resize', function () { 
+          setPortfolio();          
+        });
+      })(jQuery);
+    </script>
+  </body>
 </html>

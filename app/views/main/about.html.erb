@@ -1,0 +1,326 @@
+<!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="<%= image_path('logo.png') %>"></a>
+      </div>
+      <div class="navbar-collapse collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="/about">Novo Pacheco</a></li>
+          <li><a href="/marcas">Marcas</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+<!-- *****************************************************************************************************************
+   BLUE WRAP
+   ***************************************************************************************************************** -->
+  <div id="blue">
+      <div class="container">
+      <div class="row">
+        <h3>Nuestra historia</h3>
+      </div><!-- /row -->
+      </div> <!-- /container -->
+  </div><!-- /blue -->
+
+   
+  <!-- *****************************************************************************************************************
+   AGENCY ABOUT
+   ***************************************************************************************************************** -->
+
+   <div class="container mtb">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-responsive" src="<%= image_path('agency.jpg') %>" alt="">
+      </div>
+      
+      <div class="col-lg-6">
+        <h4>More About Our Agency.</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+        <a href="/contacto"><button class="btn btn-lg btn-primary" role="button">Contactar</button></a>
+      </div>
+    </div><!--/row -->
+   </div><!--/container -->
+
+
+   <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+  <div id="blueimp-gallery" class="blueimp-gallery">
+      <!-- The container for the modal slides -->
+      <div class="slides"></div>
+      <!-- Controls for the borderless lightbox -->
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+      <!-- The modal dialog, which will be used to wrap the lightbox content -->
+      <div class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" aria-hidden="true">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body next"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left prev">
+                  <i class="glyphicon glyphicon-chevron-left"></i>
+                  Anterior
+              </button>
+              <button type="button" class="btn btn-primary next">
+                  Siguiente
+                  <i class="glyphicon glyphicon-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+<!--Prueba-->
+  <div id="portfoliowrap">
+        <div class="portfolio-centered">
+          <h3>Galería de fotos</h3>
+            <div class="recentitems portfolio">
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g1.jpg') %>" title="Fachada" data-gallery>
+                <img src="<%= image_path('galeria/g1.jpg') %>" alt="Fachada">
+              </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g4.jpg') %>"  title="Patio" data-gallery>
+              <img src="<%= image_path('galeria/g4.jpg') %>" alt="Patio">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->      
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g5.jpg') %>" title="Planta baja" data-gallery>
+              <img src="<%= image_path('galeria/g5.jpg') %>" alt="Planta baja">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 --> 
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g6.jpg') %>"  title="Muestra" data-gallery>
+              <img src="<%= image_path('galeria/g6.jpg') %>" alt="Muestra">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g7.jpg') %>"  title="Muestra2" data-gallery>
+              <img src="<%= image_path('galeria/g7.jpg') %>" alt="Muestra2">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->  
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g8.jpg') %>"  title="Interior" data-gallery>
+              <img src="<%= image_path('galeria/g8.jpg') %>" alt="Interior">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g9.jpg') %>"  title="Juegos" data-gallery>
+              <img src="<%= image_path('galeria/g9.jpg') %>" alt="Juegos">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g10.jpg') %>"  title="Escalera" data-gallery>
+              <img src="<%= image_path('galeria/g10.jpg') %>" alt="Escalera">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g11.jpg') %>"  title="Planta alta" data-gallery>
+              <img src="<%= image_path('galeria/g11.jpg') %>" alt="Planta alta">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g12.jpg') %>"  title="Planta alta" data-gallery>
+              <img src="<%= image_path('galeria/g12.jpg') %>" alt="Planta alta">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g13.jpg') %>"  title="Planta alta" data-gallery>
+              <img src="<%= image_path('galeria/g13.jpg') %>" alt="Planta alta">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g14.jpg') %>"  title="Planta alta" data-gallery>
+              <img src="<%= image_path('galeria/g14.jpg') %>" alt="Planta alta">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->  
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g15.jpg') %>"  title="Banner" data-gallery>
+              <img src="<%= image_path('galeria/g15.jpg') %>" alt="Banner">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g16.jpg') %>"  title="Escalera" data-gallery>
+              <img src="<%= image_path('galeria/g16.jpg') %>" alt="Escalera">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g17.jpg') %>"  title="Escalera" data-gallery>
+              <img src="<%= image_path('galeria/g17.jpg') %>" alt="Escalera">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g18.jpg') %>"  title="Escalera" data-gallery>
+              <img src="<%= image_path('galeria/g18.jpg') %>" alt="Escalera">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g19.jpg') %>"  title="Estacionamiento" data-gallery>
+              <img src="<%= image_path('galeria/g19.jpg') %>" alt="Estacionamiento">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g20.jpg') %>"  title="Estacionamiento" data-gallery>
+              <img src="<%= image_path('galeria/g20.jpg') %>" alt="Estacionamiento">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <a href="<%= image_path('galeria/g21.jpg') %>"  title="Cartel" data-gallery>
+              <img src="<%= image_path('galeria/g21.jpg') %>" alt="Cartel">
+          </a>
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->               
+            </div><!-- portfolio -->
+        </div><!-- portfolio container -->
+   </div><!--/Portfoliowrap -->
+
+
+  
+
+   <!--fin de prueba-->
+<!-- *****************************************************************************************************************
+ PORTFOLIO SECTION
+ ***************************************************************************************************************** -->
+ <div id="portfoliowrap">
+  <div class="portfolio-centered">
+    <h3>Algunas de nuestras marcas</h3>
+    <div class="recentitems portfolio">
+      <div class="portfolio-item graphic-design">
+        <div class="he-wrap tpl6">
+          <img src="<%= image_path('portfolio/portfolio_09.jpg') %>" alt="">
+          <div class="he-view">
+            <div class="bg a0" data-animate="fadeIn">
+              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+              <a data-rel="prettyPhoto" href="<%= image_path('/portfolio/portfolio_07.jpg') %>"></a>
+              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
+            </div><!-- he bg -->
+          </div><!-- he view -->    
+        </div><!-- he wrap -->
+      </div><!-- end col-12 -->                 
+      <div class="portfolio-item web-design">
+        <div class="he-wrap tpl6">
+          <img src="<%= image_path('portfolio/portfolio_02.jpg') %>" alt="">
+          <div class="he-view">
+            <div class="bg a0" data-animate="fadeIn">
+              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
+              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
+            </div><!-- he bg -->
+          </div><!-- he view -->    
+        </div><!-- he wrap -->
+      </div><!-- end col-12 -->
+      <div class="portfolio-item graphic-design">
+        <div class="he-wrap tpl6">
+          <img src="<%= image_path('portfolio/portfolio_03.jpg') %>" alt="">
+          <div class="he-view">
+            <div class="bg a0" data-animate="fadeIn">
+              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
+              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
+            </div><!-- he bg -->
+          </div><!-- he view -->    
+        </div><!-- he wrap -->
+      </div><!-- end col-12 -->
+      <div class="portfolio-item graphic-design">
+        <div class="he-wrap tpl6">
+          <img src="<%= image_path('portfolio/portfolio_04.jpg') %>" alt="">
+          <div class="he-view">
+            <div class="bg a0" data-animate="fadeIn">
+              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
+              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
+            </div><!-- he bg -->
+          </div><!-- he view -->    
+        </div><!-- he wrap -->
+      </div><!-- end col-12 -->
+      <div class="portfolio-item graphic-design">
+        <div class="he-wrap tpl6">
+          <img src="<%= image_path('portfolio/portfolio_05.jpg') %>" alt="">
+          <div class="he-view">
+            <div class="bg a0" data-animate="fadeIn">
+              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
+              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
+            </div><!-- he bg -->
+          </div><!-- he view -->    
+        </div><!-- he wrap -->
+      </div><!-- end col-12 -->        
+    </div><!-- portfolio -->
+  </div><!-- portfolio container -->
+ </div><!--/Portfoliowrap -->

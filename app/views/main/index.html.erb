@@ -1,0 +1,85 @@
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="<%= image_path('logo.png') %>"></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">Novo Pacheco</a></li>
+            <li><a href="/marcas">Marcas</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+  <!-- *****************************************************************************************************************
+   HEADERWRAP
+   ***************************************************************************************************************** -->
+<section>
+  <div id="carousel-id" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="item">
+              <img src="<%= image_path('bg2.jpg') %>">
+              <div class="container">
+                  <div class="carousel-caption">
+                      <h1>Sumate a Novo Pacheco</h1>
+                      <button class="btn btn-lg btn-primary" href="#" role="button">Consultar aquí</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="item active">
+              <img src="<%= image_path('bg1.jpg') %>">
+              <div class="container">
+          <div class="carousel-caption">
+                      <h1>Un lugar de encuentros</h1>
+                      <a href="about.html"><button class="btn btn-lg btn-primary" role="button">Ver fotos</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  </div>
+</section>
+
+  <!-- *****************************************************************************************************************
+   SERVICE LOGOS
+   ***************************************************************************************************************** -->
+   
+   <h1 class="teventos">Eventos</h1>
+
+   <div id="service">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-md-4">
+          <img src="<%= image_path('e1.jpg') %>">
+          <h4>Stamateas 10/07</h4>
+          <p>Bernardo Stamateas compartira con nosotros su libro "Vivir mejor", la charla dara comienzo el dia Sabado, a partir de las 18hs en el salon de eventos del shopping, ubicado en el primer piso, los esperamos!</p>
+        </div>
+        <div class="col-md-4">
+          <img src="<%= image_path('e2.jpg') %>">
+          <h4>Taller de dibujo 24/08</h4>
+          <p>Carlos Slim impartira un taller de dibujo al mejor estilo de liniers, el cual se llevara a cabo durante 3 meses de manera gratuita en nuestro salon principal ubicado a metros de la entrada principal.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="<%= image_path('e3.jpg') %>">
+          <h4>MUESTRA 11/08</h4>
+          <p>Se llevara a cabo la muestra de expresionismo realista el dia jueves a partir de las 17 hs, el acceso es para todo publico, de manera gratuita. El artista compartira con nosotros sus inspiraciones.</p>          
+        </div>            
+      </div>
+    </div><!--/container -->
+   </div><!--/service -->
