@@ -24,4 +24,10 @@ RailsAdmin.config do |config|
     delete
     show_in_app
   end
+  config.current_user_method(&:current_user)
+  config.authorize_with do
+      if not current_user
+        redirect_to '/login'
+      end  
+    end
 end

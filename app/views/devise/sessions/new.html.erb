@@ -1,26 +1,64 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="<%= image_path('logo.png') %>"></a>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">Novo Pacheco</a></li>
+        <li><a href="/marcas">Marcas</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+<section id="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-wrap">
+          <h1 style="color: #88c635">Novo Pacheco Shopping</h1>
+          <%= notice %>
+          <%= alert %>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="form-group">
+                <%= f.email_field :email, autofocus: true, 
+                class: 'form-control', placeholder: 'ejemplo@novopacheco.com' %>
+              </div>
+              <div class="form-group">
+                <%= f.password_field :password, autocomplete: "off",
+                class: 'form-control', placeholder: 'Contraseña', id: 'key' %>
+              </div>
+              <div class="checkbox">
+                <span class="character-checkbox" onclick="showPassword()"></span>
+                <span class="label">Mostrar contraseña</span>
+              </div>
+              <%= f.submit "Ingresar", class: "btn btn-custom btn-lg btn-block" %>
+          <% end %>
+          </form>
+            <hr>
+        </div>
+      </div> <!-- /.col-xs-12 -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Page © - 2015</p>
+                <p>Powered by <strong><a href="http://www.josevillegasl.com" target="_blank">Jose Villegas</a></strong></p>
+            </div>
+        </div>
+    </div>
+</footer>
