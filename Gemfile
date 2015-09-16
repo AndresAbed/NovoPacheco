@@ -26,3 +26,4 @@ gem "paperclip", "~> 4.3"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "therubyracer"
 gem "less-rails"
+gem 'Bootstrap-Image-Gallery-rails'
