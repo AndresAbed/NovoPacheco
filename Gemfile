@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 group :development, :test do
   gem 'byebug'
 end
@@ -23,3 +22,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'rails_admin'
 gem "paperclip", "~> 4.3"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "therubyracer"
+gem "less-rails"
