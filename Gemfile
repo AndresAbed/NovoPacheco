@@ -10,6 +10,7 @@ end
 group :production do
   gem 'rails_12factor'
 end
+ruby '2.2.2'
 gem 'rails', '4.2.4'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
