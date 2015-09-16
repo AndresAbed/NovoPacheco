@@ -1,7 +1,7 @@
 class Brand < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
-  validates :logo, presence: true
+  validates :logo, presence: {message: 'no puede estar vacío'}
   has_one :detail
 
   has_attached_file :logo, 

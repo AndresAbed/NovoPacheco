@@ -20,9 +20,3 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  activerecord:
-    models:
-      user: Usuarios
-      event: Eventos
-      brand: Locales
-      detail: Detalles

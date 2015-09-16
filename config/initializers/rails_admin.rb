@@ -26,8 +26,9 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
   config.authorize_with do
-      if not current_user
-        redirect_to '/login'
-      end  
-    end
+    if not current_user
+      redirect_to '/login'
+    end  
+  end
+  config.excluded_models << User
 end
