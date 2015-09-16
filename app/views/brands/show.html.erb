@@ -1,0 +1,117 @@
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="<%= image_path('logo.png') %>"></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">Novo Pacheco</a></li>
+            <li class="active"><a href="/marcas">Marcas</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+  <!-- *****************************************************************************************************************
+   TITLE & CONTENT
+   ***************************************************************************************************************** -->
+
+   <div class="container mt">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 centered">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+        
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="<%= @brand.image1.url %>" alt="">
+            </div>
+            <div class="item">
+              <img src="<%= @brand.image2.url %>" alt="">
+            </div>
+            <div class="item">
+              <img src="<%= @brand.image3.url %>" alt="">
+            </div>
+          </div>
+        </div><!--/Carousel -->
+      </div>
+      
+      <div class="col-lg-5 col-lg-offset-1">
+        <div class="spacing"></div>
+        <h4><%= @brand.name %></h4>
+        <p><%= @brand.description %></p>
+        <h4>Además</h4>
+        <p><%= @brand.besides %></p>
+      </div>
+      
+      <div class="col-lg-4 col-lg-offset-1">
+        <div class="spacing"></div>
+        <h4>Detalles</h4>
+        <div class="hline"></div>
+        <p>
+          <b>Horario de atención:</b>
+          <% if @details.present? && (@details.open_hour.present? && @details.close_hour.present?) %>
+            <%= @details.open_hour.strftime("%H:%M") %>hs a <%= @details.close_hour.strftime("%H:%M") %>hs</p>
+          <% end %>
+        <p>
+          <b>Ubicación:</b>
+          <% if @details.present? && @details.location.present? %>
+            <%= @details.location %>
+          <% end %>
+        </p>
+        <p>
+          <b>Web:</b>
+          <% if @details.present? && @details.web.present? %>
+            <%= @details.web %>
+          <% end %>
+        </p>
+        <p>
+          <b>Ubicación:</b>
+          <% if @details.present? && @details.facebook.present? %>
+            <%= @details.facebook %>
+          <% end %>
+        </p>
+      </div>  
+    </div><!--/row -->
+   </div><!--/container -->
+   
+  <!-- *****************************************************************************************************************
+   PORTFOLIO SECTION
+   ***************************************************************************************************************** -->
+<div id="portfoliowrap">
+  <div class="portfolio-centered">
+    <h3>Otras marcas</h3>
+    <div class="recentitems portfolio">
+      <% @brands.each do |b| %>
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <img src="<%= b.logo.url %>" alt="">
+            <div class="he-view">
+              <div class="bg a0" data-animate="fadeIn">
+                <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+                <a data-rel="prettyPhoto" href="<%= b.logo.url %>"></a>
+                <%= link_to 'Ver más', brand_path(b), class: 'dmbutton a2', "data-animate" => "fadeInUp"%>
+              </div><!-- he bg -->
+            </div><!-- he view -->    
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+      <% end %>  
+    </div><!-- portfolio -->
+  </div><!-- portfolio container -->
+</div><!--/Portfoliowrap -->

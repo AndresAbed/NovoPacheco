@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/about' => "main#about"
   get '/marcas' => "main#brands"
   get '/contacto' => "main#contact"
-  get '/marca' => "main#brand_show"
+
+  resources :brands, only: [:show], path: '/marca'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

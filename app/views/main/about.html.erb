@@ -261,66 +261,20 @@
   <div class="portfolio-centered">
     <h3>Algunas de nuestras marcas</h3>
     <div class="recentitems portfolio">
-      <div class="portfolio-item graphic-design">
-        <div class="he-wrap tpl6">
-          <img src="<%= image_path('portfolio/portfolio_09.jpg') %>" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
-              <a data-rel="prettyPhoto" href="<%= image_path('/portfolio/portfolio_07.jpg') %>"></a>
-              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
-            </div><!-- he bg -->
-          </div><!-- he view -->    
-        </div><!-- he wrap -->
-      </div><!-- end col-12 -->                 
-      <div class="portfolio-item web-design">
-        <div class="he-wrap tpl6">
-          <img src="<%= image_path('portfolio/portfolio_02.jpg') %>" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
-              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
-              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
-            </div><!-- he bg -->
-          </div><!-- he view -->    
-        </div><!-- he wrap -->
-      </div><!-- end col-12 -->
-      <div class="portfolio-item graphic-design">
-        <div class="he-wrap tpl6">
-          <img src="<%= image_path('portfolio/portfolio_03.jpg') %>" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
-              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
-              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
-            </div><!-- he bg -->
-          </div><!-- he view -->    
-        </div><!-- he wrap -->
-      </div><!-- end col-12 -->
-      <div class="portfolio-item graphic-design">
-        <div class="he-wrap tpl6">
-          <img src="<%= image_path('portfolio/portfolio_04.jpg') %>" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
-              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
-              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
-            </div><!-- he bg -->
-          </div><!-- he view -->    
-        </div><!-- he wrap -->
-      </div><!-- end col-12 -->
-      <div class="portfolio-item graphic-design">
-        <div class="he-wrap tpl6">
-          <img src="<%= image_path('portfolio/portfolio_05.jpg') %>" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-              <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
-              <a data-rel="prettyPhoto" href="<%= image_path('portfolio/portfolio_07.jpg') %>"></a>
-              <a href="/marca" class="dmbutton a2" data-animate="fadeInUp"><i>Ver más</i></a>
-            </div><!-- he bg -->
-          </div><!-- he view -->    
-        </div><!-- he wrap -->
-      </div><!-- end col-12 -->        
+      <% @brands.each do |b| %>
+        <div class="portfolio-item graphic-design">
+          <div class="he-wrap tpl6">
+            <img src="<%= b.logo.url %>" alt="">
+            <div class="he-view">
+              <div class="bg a0" data-animate="fadeIn">
+                <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+                <a data-rel="prettyPhoto" href="<%= b.logo.url %>"></a>
+                <%= link_to 'Ver más', brand_path(b), class: 'dmbutton a2', "data-animate" => "fadeInUp"%>
+              </div><!-- he bg -->
+            </div><!-- he view -->    
+          </div><!-- he wrap -->
+        </div><!-- end col-12 -->
+      <% end %>  
     </div><!-- portfolio -->
   </div><!-- portfolio container -->
  </div><!--/Portfoliowrap -->
