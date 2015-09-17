@@ -13,6 +13,14 @@ RailsAdmin.config do |config|
     field :image2
     field :image3
   end
+  config.model Detail do
+    field :web
+    field :facebook
+    field :location
+    field :brand_id
+    field :open_hour
+    field :close_hour
+  end
   config.actions do
     dashboard
     index
