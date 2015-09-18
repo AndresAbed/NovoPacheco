@@ -3,7 +3,7 @@ es:
     models:
       user: Usuarios
       event: Eventos
-      brand: Locales
+      brand: Marcas
       detail: Detalles
     attributes:
       event:
@@ -19,7 +19,7 @@ es:
         image3: Imagen 3
       detail:
         location: Ubicación
-        brand: Marca
+        brand_id: Marca
         open_hour: Hora de apertura
         close_hour: Hora de cierre
   admin:

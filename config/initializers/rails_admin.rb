@@ -17,7 +17,11 @@ RailsAdmin.config do |config|
     field :web
     field :facebook
     field :location
-    field :brand_id
+    field :brand_id, :enum do
+      enum do
+        Brand.all.collect {|p| [p.name]}
+      end
+    end  
     field :open_hour
     field :close_hour
   end
