@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
     field :location
     field :brand_id, :enum do
       enum do
-        Brand.all.collect {|p| [p.name]}
+        Brand.all.collect {|p| [p.name, p.id]}
       end
     end  
     field :open_hour
