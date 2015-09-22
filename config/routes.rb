@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/about' => "main#about"
   get '/marcas' => "main#brands"
 
-  resources :brands, only: [:show], path: '/marca'
+  resources :brands, only: [:show], path: '/marcas'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

@@ -27,3 +27,4 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem "therubyracer"
 gem "less-rails"
 gem 'Bootstrap-Image-Gallery-rails'
+gem 'friendly_id'

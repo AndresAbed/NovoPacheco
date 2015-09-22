@@ -109,18 +109,20 @@
     <h3>Otras marcas</h3>
     <div class="recentitems portfolio">
       <% @brands.each do |b| %>
-        <div class="portfolio-item graphic-design">
-          <div class="he-wrap tpl6">
-            <img src="<%= b.logo.url %>" alt="">
-            <div class="he-view">
-              <div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
-                <a data-rel="prettyPhoto" href="<%= b.logo.url %>"></a>
-                <%= link_to 'Ver más', brand_path(b), class: 'dmbutton a2', "data-animate" => "fadeInUp"%>
-              </div><!-- he bg -->
-            </div><!-- he view -->    
-          </div><!-- he wrap -->
-        </div><!-- end col-12 -->
+        <% if b.id != @brand.id %>
+          <div class="portfolio-item graphic-design">
+            <div class="he-wrap tpl6">
+              <img src="<%= b.logo.url %>" alt="">
+              <div class="he-view">
+                <div class="bg a0" data-animate="fadeIn">
+                  <h3 class="a1" data-animate="fadeInDown">Conocé el local</h3>
+                  <a data-rel="prettyPhoto" href="<%= b.logo.url %>"></a>
+                  <%= link_to 'Ver más', brand_path(b), class: 'dmbutton a2', "data-animate" => "fadeInUp"%>
+                </div><!-- he bg -->
+              </div><!-- he view -->    
+            </div><!-- he wrap -->
+          </div><!-- end col-12 -->
+        <% end %>  
       <% end %>  
     </div><!-- portfolio -->
   </div><!-- portfolio container -->

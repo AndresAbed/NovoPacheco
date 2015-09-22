@@ -19,5 +19,8 @@ class Brand < ActiveRecord::Base
   has_attached_file :image3, 
   url: "/images/brands/:id/:style/:basename.:extension"
   validates_attachment :image3, content_type: { content_type: 
-    ["image/jpg", "image/jpeg", "image/png", "image/gif"] }      
+    ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 end
