@@ -79,7 +79,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {host: "www.novopacheco.com"}
   ActionMailer::Base.smtp_settings = {
     :address => 'apolo.servidoraweb.net',
-    :port => '465',
+    :port => '25',
     :authentication => :plain,
     :user_name => 'info@novopacheco.com',
     :password =>  'infonovo2015',
