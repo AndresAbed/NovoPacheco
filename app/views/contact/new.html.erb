@@ -49,7 +49,7 @@
         <h4>Pongase en contacto!</h4>
         <div class="hline"></div>
           <p>Ante cualquier duda o consulta, no dude en ponerse en contacto con nosotros, estamos a su disposición.</p>
-          <%= form_for :contact_form, url: contact_form_path do |customer| %>
+          <%= form_for :contact_form, url: contact_path do |customer| %>
             <div class="form-group">
               <label for="InputName1">Nombre</label>
               <%= customer.text_field :name, class: "form-control"%>

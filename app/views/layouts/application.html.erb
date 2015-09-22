@@ -23,7 +23,7 @@
   <!--/Feedback-->
     <div id="feedback">
       <div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
-        <%= form_for :contact_form, html: {class: "form panel-body"}, url: contact_form_path do |customer| %>
+        <%= form_for :feedback, html: {class: "form panel-body"}, url: feedback_path do |customer| %>
           <div class="form-group">
             <%= customer.email_field :email, class: "form-control",
             placeholder: "Tu e-mail", autofocus: true%>

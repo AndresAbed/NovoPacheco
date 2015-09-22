@@ -1,8 +1,13 @@
 class Contact < ApplicationMailer
   default from: "info@novopacheco.com"
 
-  def send_message(message)
+  def contact(message)
     @message = message
-    mail(to: "abedandres@gmail.com", subject: 'Aprende a programar con nuestros cursos gratis')
+    mail(to: "abedandres@gmail.com", subject: 'Test')
+  end
+
+  def feedback(message)
+    @message = message
+    mail(to: "abedandres@gmail.com", subject: 'Test')
   end
 end

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'main#index'
   get '/contacto' => 'contact#new'
-  post "/contacto" => "contact#contact_form", as: :contact_form
+  post "/contacto" => "contact#contact_form", as: :contact
+  post "/feedback" => "contact#feedback", as: :feedback
   get '/about' => "main#about"
   get '/marcas' => "main#brands"
 
