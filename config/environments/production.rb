@@ -78,11 +78,11 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = {host: "www.novopacheco.com"}
   ActionMailer::Base.smtp_settings = {
-    :address => 'smtp.sendgrid.net',
-    :port => '587',
+    :address => 'apolo.servidoraweb.net',
+    :port => '465',
     :authentication => :plain,
-    :user_name => 'AndresAbed',
-    :password =>  'a299397952209a',
+    :user_name => 'info@novopacheco.com',
+    :password =>  'infonovo2015',
     :domain => 'novopacheco.com',
     :enable_starttls_auto => true
   }
