@@ -228,7 +228,6 @@ PLATFORMS
 DEPENDENCIES
   Bootstrap-Image-Gallery-rails
   byebug
-  coffee-rails (~> 4.1.0)
   devise
   friendly_id
   jbuilder (~> 2.0)

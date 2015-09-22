@@ -1,13 +1,28 @@
 RailsAdmin.config do |config|
   config.model Event do
     field :title
-    field :description
+    field :description, :text do
+      html_attributes do
+        {rows: 10, 
+          cols: 50}
+      end
+    end
     field :image
   end
   config.model Brand do
     field :name
-    field :description
-    field :besides
+    field :description, :text do
+      html_attributes do
+        {rows: 10, 
+          cols: 50}
+      end
+    end
+    field :besides, :text do
+      html_attributes do
+        {rows: 10, 
+          cols: 50}
+      end
+    end
     field :logo
     field :image1
     field :image2

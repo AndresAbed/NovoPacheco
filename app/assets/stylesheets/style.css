@@ -625,3 +625,18 @@ img {
   font-size: 12pt;
   padding: 6px;
 }
+
+#gmap{
+  width: 100%;
+}
+
+.carousel-inner>.item>a>img, 
+.carousel-inner>.item>img, 
+.img-responsive, 
+.thumbnail a>img, 
+.thumbnail>img{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}

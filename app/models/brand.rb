@@ -1,7 +1,10 @@
 class Brand < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
-  validates :logo, presence: {message: 'no puede estar vacío'}
+  validates :logo, presence: {message: "no puede estar vacío"}
+  validates :image1, presence: {message: "no puede estar vacío"}
+  validates :image2, presence: {message: "no puede estar vacío"}
+  validates :image3, presence: {message: "no puede estar vacío"}
   has_one :detail, dependent: :destroy
 
   has_attached_file :logo, 

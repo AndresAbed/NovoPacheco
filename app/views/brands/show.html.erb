@@ -76,24 +76,21 @@
         <div class="hline"></div>
         <p>
           <b>Horario de atención:</b>
-          <% if @details.present? && (@details.open_hour.present? && @details.close_hour.present?) %>
-            <%= @details.open_hour.strftime("%H:%M") %>hs a <%= @details.close_hour.strftime("%H:%M") %>hs</p>
-          <% end %>
+          <%= @details.open_hour.strftime("%H:%M") %>hs a <%= @details.close_hour.strftime("%H:%M") %>hs</p>
         <p>
-          <b>Ubicación:</b>
           <% if @details.present? && @details.location.present? %>
+            <b>Ubicación:</b>
             <%= @details.location %>
           <% end %>
         </p>
         <p>
-          <b>Web:</b>
           <% if @details.present? && @details.web.present? %>
-            <%= @details.web %>
+            <b>Web:</b> <%= @details.web %>
           <% end %>
         </p>
         <p>
-          <b>Ubicación:</b>
           <% if @details.present? && @details.facebook.present? %>
+            <b>Facebook:</b>
             <%= @details.facebook %>
           <% end %>
         </p>
