@@ -10,7 +10,4 @@ class MainController < ApplicationController
   def brands
     @brands = Brand.all.order("created_at DESC")
   end
-
-  def contact
-  end
 end

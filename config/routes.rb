@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'main#index'
+  get '/contacto' => 'contact#new'
+  post "/contacto" => "contact#contact_form", as: :contact_form
   get '/about' => "main#about"
   get '/marcas' => "main#brands"
-  get '/contacto' => "main#contact"
 
   resources :brands, only: [:show], path: '/marca'
 

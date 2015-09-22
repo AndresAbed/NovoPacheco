@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <title>Novo Pacheco Shopping</title>
+    <link rel="shortcut icon" href="http://s23.postimg.org/aur7o0c47/oie_transparent_1.png"/>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
@@ -22,17 +23,19 @@
   <!--/Feedback-->
     <div id="feedback">
       <div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
-        <form method="POST" action="/feedback.php" class="form panel-body" role="form">
+        <%= form_for :contact_form, html: {class: "form panel-body"}, url: contact_form_path do |customer| %>
           <div class="form-group">
-            <input class="form-control" name="Emailfeedback" autofocus placeholder="Tu e-mail" type="Email" />
+            <%= customer.email_field :email, class: "form-control",
+            placeholder: "Tu e-mail", autofocus: true%>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="Mensajefeedback" required placeholder="Sumate a nuestro shopping, agendemos una reunion" rows="5"></textarea>
+            <%= customer.text_area :message, class: "form-control", 
+            rows: "5", placeholder: "Sumate a nuestro shopping, agendemos una reunion" %>
           </div>
-          <button class="btn btn-primary pull-right" type="submit">Contactar</button>
-        </form>
-    </div>
-    <div id="feedback-tab">Marcas</div>
+          <%= customer.submit 'Contactar', class: "btn btn-primary pull-right" %>
+        <% end %>
+      </div>
+      <div id="feedback-tab">Marcas</div>
     </div>
   <!--/Feedback-->
 

@@ -1,0 +1,88 @@
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="<%= image_path('logo.png') %>"></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">Novo Pacheco</a></li>
+            <li><a href="/marcas">Marcas</a></li>
+            <li class="active"><a href="/contacto">Contacto</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <% if flash.notice %>
+      <div class="alert alert-success">
+        <%= flash.notice %>  
+      </div>
+    <% end %>
+    <% if flash.alert %>
+      <div class="alert alert-danger">
+        <%= flash.alert %>  
+      </div>
+    <% end %>
+
+
+  <!-- *****************************************************************************************************************
+   CONTACT WRAP
+   ***************************************************************************************************************** -->
+
+   <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5786.836632775678!2d-58.620379031643125!3d-34.47024157566476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sav+boulogne+sur+mer+1200+general+pacheco!5e0!3m2!1ses!2sar!4v1436497694300" width="1260" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+   
+  <!-- *****************************************************************************************************************
+   CONTACT FORMS
+   ***************************************************************************************************************** -->
+
+   <div class="container mtb">
+    <div class="row">
+      <div class="col-lg-8">
+        <h4>Pongase en contacto!</h4>
+        <div class="hline"></div>
+          <p>Ante cualquier duda o consulta, no dude en ponerse en contacto con nosotros, estamos a su disposición.</p>
+          <%= form_for :contact_form, url: contact_form_path do |customer| %>
+            <div class="form-group">
+              <label for="InputName1">Nombre</label>
+              <%= customer.text_field :name, class: "form-control"%>
+            </div>
+            <div class="form-group">
+              <label for="InputEmail1">Email</label>
+              <%= customer.email_field :email, class: "form-control"%>
+            </div>
+            <div class="form-group">
+              <label for="InputSubject1">Asunto</label>
+              <%= customer.text_field :subject, class: "form-control"%>
+            </div>
+            <div class="form-group">
+              <label for="message1">Mensaje</label>
+              <%= customer.text_area :message, class: "form-control", rows: "8" %>
+            </div>
+            <%= customer.submit 'Enviar', class: "btn btn-theme" %>
+          <% end %>
+      </div><!--/col-lg-8 -->
+      
+      <div class="col-lg-4">
+        <h4>Datos adicionales</h4>
+        <div class="hline"></div>
+          <p>
+            Boulogne Sur Mer,<br/>
+            1275, General Pacheco,<br/>
+            Argentina.<br/>
+          </p>
+          <p>
+            <strong>Email:</strong> info@novopacheco.com<br/>
+            <strong>Tel:</strong> 381 4 460610
+          </p>
+          <p><strong>Horario de atención al público</strong><br> 9 a 21hs. de Lunes a Viernes</p>
+      </div>
+    </div><!--/row -->
+   </div><!--/container -->
