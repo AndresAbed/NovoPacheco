@@ -1,13 +1,13 @@
 class Contact < ApplicationMailer
-  default from: "info@novopacheco.com"
+  default from: "Novo Pacheco <info@novopacheco.com>"
 
   def contact(message)
     @message = message
-    mail(to: "abedandres@gmail.com", subject: 'Test')
+    mail(to: "abedandres@gmail.com", subject: 'Contacto Web')
   end
 
   def feedback(message)
     @message = message
-    mail(to: "abedandres@gmail.com", subject: 'Test')
+    mail(to: "abedandres@gmail.com", subject: 'Contacto Web')
   end
 end
