@@ -1,7 +1,7 @@
 
 Devise.setup do |config|
-
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.secret_key = '13aa7cf7a665ace2cda717c0cc9b106d471c3cc7f828134d2ecd27ce9b2af274790a146bd84bb8d980e91a1442ac8ed95fe0f968424fa918743fa91d27937761'
+  config.mailer_sender = 'info@novopacheco.com'
   require 'devise/orm/active_record'
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
