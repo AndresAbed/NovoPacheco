@@ -8,7 +8,6 @@ timeout 30
 
 # Set up socket location
 listen "/home/deploy/NovoPacheco/tmp/sockets/unicorn.sock", :backlog => 64
-listen 3000
 
 # Logging
 stderr_path "/home/deploy/NovoPacheco/log/unicorn.stderr.log"
