@@ -3,11 +3,11 @@ class Contact < ApplicationMailer
 
   def contact(message)
     @message = message
-    mail(to: "mmenendezproyectos@gmail.com", subject: 'Contacto Web')
+    mail(to: "info@novopacheco.com", subject: 'Contacto Web')
   end
 
   def feedback(message)
     @message = message
-    mail(to: "mmenendezproyectos@gmail.com", subject: 'Contacto Web')
+    mail(to: "info@novopacheco.com", subject: 'Contacto Web')
   end
 end
